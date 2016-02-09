@@ -1,14 +1,25 @@
 "Use strict;";
 (function() {
-    function getNumericSum(arr) {
-        var numbersArray = getNumbers(arr);
+    function getNumbers(arr) {
         var sum = 0;
-        for (i = 0; i < numbersArray.length; i++) {
-            if (!isNaN(numbersArray[i])) {
-                sum = sum + numbersArray[i];
+        var newarr = [];
+        for (i = 0; i < arr.length; i++) {
+            arr[i] = parseFloat(arr[i]);
+            if (!isNaN(arr[i])) {
+                newarr.push(arr[i]);
             }
         }
-        console.log(sum);
+        console.log(newarr);
     }
-    getNumericSum(['4', '1', 'hi']);
+    function getNumericSum(arr) {
+        getNumbers(arr);
+        var sum = 0;
+        for (i = 0; i <arr.length; i++) {
+            if (!isNaN(arr[i])) {
+                sum = sum + arr[i];
+            }
+        }
+        console.log("Result -> "+sum);
+    }
+    getNumericSum(['4', '1', 'hi', 'gtg']);
 })();

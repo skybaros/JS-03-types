@@ -1,4 +1,4 @@
-"Use strict";
+"Use strict;";
 (function() {
     function getQuanOfUniqueElements(arr) {
         var unq = 0;
@@ -7,9 +7,9 @@
             if (res.indexOf(arr[i]) == -1) {
                 res.push(arr[i]);
             }
-        }
+        }console.log(arr);
         unq = res.length;
-        console.log(unq);
+        console.log("Result -> "+ unq);
     }
     getQuanOfUniqueElements([5, 5, '5', 4, 3]);
 })();
